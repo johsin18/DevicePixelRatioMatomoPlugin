@@ -43,10 +43,7 @@ class GetDevicePixelRatio extends Base
             $view->config->addTranslations(array('label' => $this->dimension->getName()));
         }
 
-        // $view->config->show_search = false;
-        // $view->requestConfig->filter_sort_column = 'nb_visits';
-        // $view->requestConfig->filter_limit = 10';
-
+        $view->config->show_search = false;
         $view->config->columns_to_display = array_merge(array('label'), $this->metrics);
     }
 
