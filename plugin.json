@@ -1,0 +1,31 @@
+{
+    "name": "DevicePixelRatio",
+    "description": "Collects statistics on the device pixel ratio of the visitor's devices.  Useful to analyze how many visitors have Retina or other high DPI displays.",
+    "version": "0.1.0",
+    "theme": false,
+    "require": {
+        "piwik": ">=3.5.1-stable,<4.0.0-b1"
+    },
+    "authors": [
+        {
+            "name": "Johannes Singler",
+            "email": "johannes@singler.name",
+            "homepage": ""
+        }
+    ],
+    "donate": {
+      "paypal": "johannes@singler.name",
+      "flattr": "",
+      "bitcoin": ""
+    },
+    "support": {
+        "issues": "https://github.com/johsin18/DevicePixelRatioMatomoPlugin/issues",
+        "wiki": "https://github.com/johsin18/DevicePixelRatioMatomoPlugin/wiki",
+        "source": "https://github.com/johsin18/DevicePixelRatioMatomoPlugin"
+    },
+    "homepage": "",
+    "license": "GPL-3.0+",
+    "keywords": [
+        "Retina", "high DPI", "high resolution", "hires", "hi-res", "device pixel ratio"
+    ]
+}
