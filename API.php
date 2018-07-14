@@ -8,8 +8,10 @@
  */
 namespace Piwik\Plugins\DevicePixelRatio;
 
+use Piwik\Archive;
 use Piwik\DataTable;
 use Piwik\DataTable\Row;
+use Piwik\Piwik;
 
 /**
  * API for plugin DevicePixelRatio
@@ -18,7 +20,6 @@ use Piwik\DataTable\Row;
  */
 class API extends \Piwik\Plugin\API
 {
-
     /**
      * @param int    $idSite
      * @param string $period
@@ -28,10 +29,12 @@ class API extends \Piwik\Plugin\API
      */
     public function getDevicePixelRatio($idSite, $period, $date, $segment = false)
     {
-        $table = new DataTable();
-
-        $table->addRowFromArray(array(Row::COLUMNS => array('nb_visits' => 5)));
-
-        return $table;
+        Piwik::checkUserHasViewAccess($idSite);
+        $archive = Archive::build($idSite, $period, $date, $segment);
+        $dataTable = $archive->getDataTable(Archiver::DEVICEPIXELRATIO_ARCHIVE_RECORD);
+        $dataTable->queueFilter('ReplaceColumnNames');
+        $dataTable->queueFilter('ReplaceSummaryRowLabel');
+        $dataTable->filter('AddSegmentValue');
+        return $dataTable;
     }
 }

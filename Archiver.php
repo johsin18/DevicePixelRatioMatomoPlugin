@@ -8,6 +8,9 @@
 
 namespace Piwik\Plugins\DevicePixelRatio;
 
+use Piwik\DataTable;
+use Piwik\Metrics;
+
 /**
  * Class Archiver
  * @package Piwik\Plugins\DevicePixelRatio
@@ -22,22 +25,20 @@ namespace Piwik\Plugins\DevicePixelRatio;
  */
 class Archiver extends \Piwik\Plugin\Archiver
 {
+    const DEVICE_PIXEL_RATIO_DIMENSION = "log_visit.device_pixel_ratio";
     const DEVICEPIXELRATIO_ARCHIVE_RECORD = "DevicePixelRatio_archive_record";
 
     public function aggregateDayReport()
     {
-         *
-         * $visitorMetrics = $this
-         * ->getLogAggregator()
-         * ->getMetricsFromVisitByDimension('idvisitor')
-         * ->asDataTable();
-         * $visitorReport = $visitorMetrics->getSerialized();
-         * $this->getProcessor()->insertBlobRecord(self::DEVICEPIXELRATIO_ARCHIVE_RECORD, $visitorReport);
+        $visitorMetrics = $this
+             ->getLogAggregator()
+             ->getMetricsFromVisitByDimension(self::DEVICE_PIXEL_RATIO_DIMENSION)
+             ->asDataTable();
+        $this->getProcessor()->insertBlobRecord(self::DEVICEPIXELRATIO_ARCHIVE_RECORD, $visitorMetrics->getSerialized());
     }
 
     public function aggregateMultipleReports()
     {
-         *
-         * $this->getProcessor()->aggregateDataTableRecords(self::DEVICEPIXELRATIO_ARCHIVE_RECORD);
+         $this->getProcessor()->aggregateDataTableRecords(self::DEVICEPIXELRATIO_ARCHIVE_RECORD);
     }
 }
