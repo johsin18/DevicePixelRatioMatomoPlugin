@@ -9,6 +9,7 @@
 namespace Piwik\Plugins\DevicePixelRatio\Columns;
 
 use Piwik\Piwik;
+use Piwik\Common;
 use Piwik\Plugin\Dimension\VisitDimension;
 use Piwik\Plugin\Segment;
 use Piwik\Tracker\Request;
@@ -70,11 +71,10 @@ class DevicePixelRatio extends VisitDimension
      */
     public function onNewVisit(Request $request, Visitor $visitor, $action)
     {
-        if (empty($action)) {
-            return 0;
-        }
-
-        return 1;
+        $devicePixelRatio = Common::getRequestVar('devicePixelRatio', false, 'string', $request->getParams());
+        if (preg_match('/^\d+\.?\d*$/', $devicePixelRatio) === 0)
+            return false;
+        return $devicePixelRatio; // database will round to two decimals
 
         // you could also easily save any custom tracking url parameters
         // return Common::getRequestVar('myCustomTrackingParam', 'default', 'string', $request->getParams());
@@ -94,10 +94,6 @@ class DevicePixelRatio extends VisitDimension
      */
     public function onExistingVisit(Request $request, Visitor $visitor, $action)
     {
-        if (empty($action)) {
-            return false; // Do not change an already persisted value
-        }
-
-        return $visitor->getVisitorColumn($this->columnName) + 1;
+        return false;
     }
 }
