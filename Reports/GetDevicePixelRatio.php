@@ -13,6 +13,7 @@ use Piwik\Plugin\Report;
 use Piwik\Plugin\ViewDataTable;
 use Piwik\Plugins\DevicePixelRatio\Columns\DevicePixelRatio;
 use Piwik\View;
+use Piwik\plugin\ReportsProvider;
 
 /**
  * This class defines the report for the device pixel ratios.
@@ -54,7 +55,9 @@ class GetDevicePixelRatio extends Base
      */
     public function getRelatedReports()
     {
-        return array(); // eg return array(new XyzReport());
+        return array(
+            ReportsProvider::factory('Resolution', 'getResolution'),
+        );
     }
 
 }
