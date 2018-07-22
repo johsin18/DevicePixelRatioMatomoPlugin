@@ -31,10 +31,13 @@ class API extends \Piwik\Plugin\API
     {
         Piwik::checkUserHasViewAccess($idSite);
         $archive = Archive::build($idSite, $period, $date, $segment);
+        /** @var DataTable|DataTable\Map $dataTable */
         $dataTable = $archive->getDataTable(Archiver::DEVICEPIXELRATIO_ARCHIVE_RECORD);
         $dataTable->queueFilter('ReplaceColumnNames');
         $dataTable->queueFilter('ReplaceSummaryRowLabel');
+        $dataTable->filter('Piwik\Plugins\DevicePixelRatio\DataTable\Filter\ReplaceNullByUnknown');
         $dataTable->filter('AddSegmentValue');
+
         return $dataTable;
     }
 }

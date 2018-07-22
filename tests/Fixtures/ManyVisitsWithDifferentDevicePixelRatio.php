@@ -15,7 +15,7 @@ class ManyVisitsWithDifferentDevicePixelRatio extends Fixture
     public $idSite = 1;
     public $dateTime = '2018-07-03 07:00:00';
 
-    public $devicePixelRatios = array('1.00', '1.25', '1', '1.50', '2.', '3.0', '2.00', '1.00', '1.0', '1.33333333333');
+    public $devicePixelRatios = array('1.00', '1.25', '1', '1.50', '2.', '3.0', '2.00', '1.00', '1.0', '1.33333333333', '', 'attack');
 
     public function setUp()
     {
