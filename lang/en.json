@@ -1,6 +1,8 @@
 {
     "DevicePixelRatio": {
         "DevicePixelRatio": "Device Pixel Ratio",
-        "DevicePixelRatioAcronym": "DPR"
+        "DevicePixelRatioRanges": "Device Pixel Ratio Ranges",
+        "DevicePixelRatioAcronym": "DPR",
+        "upToX": "up to %s"
     }
 }

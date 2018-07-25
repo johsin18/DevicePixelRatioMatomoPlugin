@@ -18,16 +18,16 @@ use Piwik\plugin\ReportsProvider;
  *
  * See {@link http://developer.piwik.org/api-reference/Piwik/Plugin/Report} for more information.
  */
-class GetDevicePixelRatio extends Base
+class GetDevicePixelRatioRanges extends Base
 {
     protected function init()
     {
         parent::init();
 
-        $this->name          = Piwik::translate('DevicePixelRatio_DevicePixelRatio');
+        $this->name          = Piwik::translate('DevicePixelRatio_DevicePixelRatioRanges');
 
         // This defines in which order your report appears in the mobile app, in the menu and in the list of widgets
-        $this->order = 10; // after Screen Resolution
+        $this->order = 11; // after Device Pixel Ratio
     }
 
     /**
@@ -36,6 +36,9 @@ class GetDevicePixelRatio extends Base
     public function configureView(ViewDataTable $view)
     {
         parent::configureView($view);
+        $view->requestConfig->filter_sort_column = 'label';
+        $view->requestConfig->filter_sort_order = 'asc';
+        $view->config->max_graph_elements = false; // show all values in pie chart
     }
 
     /**
@@ -44,7 +47,7 @@ class GetDevicePixelRatio extends Base
     public function getRelatedReports()
     {
         return array(
-            ReportsProvider::factory('DevicePixelRatio', 'getDevicePixelRatioRanges'),
+            ReportsProvider::factory('DevicePixelRatio', 'getDevicePixelRatio'),
         );
     }
 

@@ -40,4 +40,28 @@ class API extends \Piwik\Plugin\API
 
         return $dataTable;
     }
+
+    /**
+     * @param int    $idSite
+     * @param string $period
+     * @param string $date
+     * @param bool|string $segment
+     * @return DataTable
+     */
+    public function getDevicePixelRatioRanges($idSite, $period, $date, $segment = false)
+    {
+        $dataTable = $this->getDevicePixelRatio($idSite, $period, $date, $segment);
+        $dataTable->filter('GroupBy', array(
+                    'label',
+                    function ($label) {
+                        if (!is_numeric($label))
+                            return $label;
+                        $f = floatval($label);
+                        $c = number_format(ceil($f), 2);
+                        return Piwik::translate("DevicePixelRatio_upToX", $c);
+                    }
+                ));
+
+        return $dataTable;
+    }
 }

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<result>
+	<row>
+		<label>up to 2.00</label>
+		<nb_uniq_visitors>5</nb_uniq_visitors>
+		<nb_visits>5</nb_visits>
+		<nb_actions>5</nb_actions>
+		<nb_users>0</nb_users>
+		<max_actions>1</max_actions>
+		<sum_visit_length>0</sum_visit_length>
+		<bounce_count>5</bounce_count>
+		<nb_visits_converted>0</nb_visits_converted>
+		<segment>devicePixelRatio==1.33</segment>
+	</row>
+	<row>
+		<label>up to 1.00</label>
+		<nb_uniq_visitors>4</nb_uniq_visitors>
+		<nb_visits>4</nb_visits>
+		<nb_actions>4</nb_actions>
+		<nb_users>0</nb_users>
+		<max_actions>1</max_actions>
+		<sum_visit_length>0</sum_visit_length>
+		<bounce_count>4</bounce_count>
+		<nb_visits_converted>0</nb_visits_converted>
+		<segment>devicePixelRatio==1.00</segment>
+	</row>
+	<row>
+		<label>Unknown</label>
+		<nb_uniq_visitors>2</nb_uniq_visitors>
+		<nb_visits>2</nb_visits>
+		<nb_actions>2</nb_actions>
+		<nb_users>0</nb_users>
+		<max_actions>1</max_actions>
+		<sum_visit_length>0</sum_visit_length>
+		<bounce_count>2</bounce_count>
+		<nb_visits_converted>0</nb_visits_converted>
+		<segment>devicePixelRatio==Unknown</segment>
+	</row>
+	<row>
+		<label>up to 3.00</label>
+		<nb_uniq_visitors>1</nb_uniq_visitors>
+		<nb_visits>1</nb_visits>
+		<nb_actions>1</nb_actions>
+		<nb_users>0</nb_users>
+		<max_actions>1</max_actions>
+		<sum_visit_length>0</sum_visit_length>
+		<bounce_count>1</bounce_count>
+		<nb_visits_converted>0</nb_visits_converted>
+		<segment>devicePixelRatio==3.00</segment>
+	</row>
+</result>
