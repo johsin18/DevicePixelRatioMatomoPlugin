@@ -1,5 +1,7 @@
 # Matomo DevicePixelRatio Plugin
 
+[![Build Status](https://travis-ci.org/johsin18/DevicePixelRatioMatomoPlugin.svg?branch=master)](https://travis-ci.org/johsin18/DevicePixelRatioMatomoPlugin)
+
 ## Description
 
 This plugin collects statistics on the device pixel ratio of the visitor's devices.  This is useful to analyze how many visitors have Retina or other high DPI displays.  Find the report in the Visitors - Devices section.
