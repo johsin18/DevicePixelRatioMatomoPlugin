@@ -10,6 +10,7 @@ namespace Piwik\Plugins\DevicePixelRatio\Reports;
 
 use Piwik\Piwik;
 use Piwik\Plugin\ViewDataTable;
+use Piwik\Plugins\CoreVisualizations\Visualizations\JqplotGraph\Pie;
 use Piwik\View;
 use Piwik\plugin\ReportsProvider;
 
@@ -39,6 +40,11 @@ class GetDevicePixelRatioRanges extends Base
         $view->requestConfig->filter_sort_column = 'label';
         $view->requestConfig->filter_sort_order = 'asc';
         $view->config->max_graph_elements = false; // show all values in pie chart
+    }
+
+    public function getDefaultTypeViewDataTable()
+    {
+        return Pie::ID;
     }
 
     /**
