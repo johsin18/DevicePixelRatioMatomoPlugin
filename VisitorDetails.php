@@ -11,6 +11,7 @@ namespace Piwik\Plugins\DevicePixelRatio;
 use Piwik\Piwik;
 use Piwik\Plugins\Live\VisitorDetailsAbstract;
 
+/** Adds the device pixel ratio to the tooltip shown when hovering over the device type icon in the visitor log. */
 class VisitorDetails extends VisitorDetailsAbstract
 {
     public function extendVisitorDetails(&$visitor)
