@@ -1,7 +1,7 @@
 {
     "name": "DevicePixelRatio",
     "description": "Collects statistics on the device pixel ratio of the visitor's devices.  Useful to analyze how many visitors have Retina or other high DPI displays.",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "theme": false,
     "require": {
         "piwik": ">=3.5.1,<4.0.0-b1"
