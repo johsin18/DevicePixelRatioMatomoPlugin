@@ -10,9 +10,4 @@ namespace Piwik\Plugins\DevicePixelRatio;
 
 class DevicePixelRatio extends \Piwik\Plugin
 {
-    public function isTrackerPlugin()
-    {
-        // declare that this plugin's tracker(.min).js should be included in the JavaScript tracker code
-        return true;
-    }
 }
