@@ -4,7 +4,7 @@
     "version": "1.0.3",
     "theme": false,
     "require": {
-        "piwik": ">=3.13.6,<5.0.0-b1"
+        "piwik": ">=4.0.0-b1,<5.0.0-b1"
     },
     "archive": {
       "exclude": [
