@@ -1,8 +1,8 @@
 /*!
- * Piwik - free/libre analytics platform
+ * Matomo - free/libre analytics platform
  *
- * @link http://piwik.org
- * @license http://piwik.org/free-software/bsd/ BSD-3 Clause (also in js/LICENSE.txt)
+ * @link http://matomo.org
+ * @license http://matomo.org/free-software/bsd/ BSD-3 Clause (also in js/LICENSE.txt)
  * @license magnet:?xt=urn:btih:c80d50af7d3db9be66a4d0a86db0286e4fd33292&dn=bsd-3-clause.txt BSD-3-Clause
  */
 
@@ -14,12 +14,12 @@
 (function () {
 
     function init() {
-        if ('object' === typeof window && !window.Piwik) {
-            // piwik is not defined yet
+        if ('object' === typeof window && !window.Matomo) {
+            // Matomo is not defined yet
             return;
         }
 
-        Piwik.addPlugin('DevicePixelRatio', {
+        Matomo.addPlugin('DevicePixelRatio', {
             log: function () {
 
                 devicePixelRatio = window.devicePixelRatio;
@@ -32,15 +32,15 @@
         });
     }
 
-    if ('object' === typeof window.Piwik) {
+    if ('object' === typeof window.Matomo) {
         init();
     } else {
         // tracker is loaded separately for sure
-        if ('object' !== typeof window.piwikPluginAsyncInit) {
-            window.piwikPluginAsyncInit = [];
+        if ('object' !== typeof window.matomoPluginAsyncInit) {
+            window.matomoPluginAsyncInit = [];
         }
 
-        window.piwikPluginAsyncInit.push(init);
+        window.matomoPluginAsyncInit.push(init);
     }
 
 })();
