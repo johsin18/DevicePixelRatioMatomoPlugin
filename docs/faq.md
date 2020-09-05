@@ -10,4 +10,4 @@ The plugin records the device pixel ratio at the beginning of each visit, later 
 
 __An unknown device pixel ratio is reported for all visitors.  What is wrong?__
 
-This plugin needs to add a snippet to the JavaScript code that make the browser report visitor actions.  To allow this addition, piwik.js must be writable in you installation ("Writable JavaScript Tracker" in System Check must be checked).  As the script might be cached on client side, it might take a while until all clients will correctly report the device pixel ratio.  If you report the actions using some other API, add "devicePixelRatio=1.23" to the arguments.
+This plugin needs to add a snippet to the JavaScript code that make the browser report visitor actions.  To allow this addition, matomo.js must be writable in you installation ("Writable JavaScript Tracker" in System Check must be checked).  As the script might be cached on client side, it might take a while until all clients will correctly report the device pixel ratio.  If you report the actions using some other API, add "devicePixelRatio=1.23" to the arguments.

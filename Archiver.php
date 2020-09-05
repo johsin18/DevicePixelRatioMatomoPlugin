@@ -1,8 +1,8 @@
 <?php
 /**
- * Piwik - free/libre analytics platform
+ * Matomo - free/libre analytics platform
  *
- * @link http://piwik.org
+ * @link http://matomo.org
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  */
 
@@ -20,8 +20,8 @@ use Piwik\Metrics;
  * aggregateDayReport() and other for summing daily reports into periods
  * like week, month, year or custom range aggregateMultipleReports().
  *
- * For more detailed information about Archiver please visit Piwik developer guide
- * http://developer.piwik.org/api-reference/Piwik/Plugin/Archiver
+ * For more detailed information about Archiver please visit Matomo developer guide
+ * http://developer.matomo.org/api-reference/Piwik/Plugin/Archiver
  */
 class Archiver extends \Piwik\Plugin\Archiver
 {

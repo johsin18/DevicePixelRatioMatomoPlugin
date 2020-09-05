@@ -1,8 +1,8 @@
 <?php
 /**
- * Piwik - free/libre analytics platform
+ * Matomo - free/libre analytics platform
  *
- * @link    http://piwik.org
+ * @link    http://matomo.org
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  */
 namespace Piwik\Plugins\DevicePixelRatio\tests\Fixtures;
@@ -48,7 +48,7 @@ class ManyVisitsWithDifferentDevicePixelRatio extends Fixture
             // first visit
             $date = Date::factory($dateTime)->addHour($i);
             $t->setForceVisitDateTime($date->getDatetime());
-            $t->setUrl("http://piwik.net/grue/lair");
+            $t->setUrl("http://matomo.net/grue/lair");
 
             if ($this->devicePixelRatios[$i] != '')
                 $t->setCustomTrackingParameter('devicePixelRatio', $this->devicePixelRatios[$i]);
@@ -70,7 +70,7 @@ class ManyVisitsWithDifferentDevicePixelRatio extends Fixture
         $t->setIp('194.57.91.215');
         $t->setUserId('userid.email@example.org');
         $t->setCustomTrackingParameter('devicePixelRatio', '1.0');
-        $t->setUrl("http://piwik.net/grue/lair");
+        $t->setUrl("http://matomo.net/grue/lair");
         self::checkResponse($t->doTrackPageView('Page tracked later'));
     }
 }

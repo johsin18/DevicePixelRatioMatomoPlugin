@@ -1,8 +1,8 @@
 <?php
 /**
- * Piwik - free/libre analytics platform
+ * Matomo - free/libre analytics platform
  *
- * @link http://piwik.org
+ * @link http://matomo.org
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  */
 
@@ -17,7 +17,7 @@ use Piwik\plugin\ReportsProvider;
 /**
  * This class defines the report for the device pixel ratios.
  *
- * See {@link http://developer.piwik.org/api-reference/Piwik/Plugin/Report} for more information.
+ * See {@link http://developer.matomo.org/api-reference/Piwik/Plugin/Report} for more information.
  */
 class GetDevicePixelRatioRanges extends Base
 {
