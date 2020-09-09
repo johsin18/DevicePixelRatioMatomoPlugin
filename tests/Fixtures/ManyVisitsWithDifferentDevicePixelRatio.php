@@ -17,7 +17,7 @@ class ManyVisitsWithDifferentDevicePixelRatio extends Fixture
 
     public $devicePixelRatios = array('1.00', '1.25', '1', '1.50', '2.', '3.0', '2.00', '1.00', '1.0', '1.33333333333', '', 'attack');
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->setUpWebsitesAndGoals();
         $this->trackVisitsInTimespan();
