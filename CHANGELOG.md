@@ -1,5 +1,9 @@
 ## Changelog
 
+## 2.0.1
+
+* Declare compatible with Matomo 5 (no real changes).
+
 ## 2.0.0
 
 * Make compatible with Matomo 4.
