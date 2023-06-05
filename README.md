@@ -1,6 +1,6 @@
 # Device Pixel Ratio Matomo Plugin
 
-[![Build Status](https://travis-ci.org/johsin18/DevicePixelRatioMatomoPlugin.svg?branch=master)](https://travis-ci.org/johsin18/DevicePixelRatioMatomoPlugin)
+[![Plugin DevicePixelRatio Tests](https://github.com/johsin18/DevicePixelRatioMatomoPlugin/actions/workflows/matomo-tests.yml/badge.svg)](https://github.com/johsin18/DevicePixelRatioMatomoPlugin/actions/workflows/matomo-tests.yml)
 
 ## Description
 
